@@ -110,11 +110,11 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
-      <SignInContainer direction="column" justifyContent="space-between">
+      <SignInContainer direction="column" justifyContent="space-between"  className="bg-cyan-600">
         <ColorModeSelect
-          sx={{ position: "fixed", top: "1rem", right: "1rem" }}
+          sx={{ position: "fixed", top: "5rem", right: "1rem" }}
         />
-        <Card variant="outlined">
+        <Card variant="outlined"  className="w-[1000px]" >   
           <Typography
             component="h1"
             variant="h4"
@@ -128,6 +128,7 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
             onSubmit={formSubmitHandler}
             noValidate
             sx={{
+             
               display: "flex",
               flexDirection: "column",
               width: "100%",

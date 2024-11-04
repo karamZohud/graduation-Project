@@ -3,6 +3,7 @@ import { Button, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { list } from "@/data/navbar";
+import ColorModeSelect from "@/shared-theme/ColorModeSelect";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(
@@ -117,7 +118,7 @@ const Navbar = () => {
             <div className="sm:flex sm:gap-4">
               <a
                 className="rounded-md bg-sky-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="#"
+                href="sign-in"
               >
                 Login
               </a>
@@ -125,7 +126,7 @@ const Navbar = () => {
               <div className="hidden sm:flex">
                 <a
                   className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-sky-600"
-                  href="#"
+                  href="sign-up"
                 >
                   Register
                 </a>

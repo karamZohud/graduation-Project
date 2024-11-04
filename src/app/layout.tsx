@@ -32,7 +32,7 @@ export default function RootLayout({
       <body >
       <ToastContainer theme='colored' position='top-center' />
         <Navbar />
-       <div className="h-[500px] bg-slate-600">
+       <div className=" min-h-[500px] bg-gray-50">
        {children}
        </div>
         <Footer />

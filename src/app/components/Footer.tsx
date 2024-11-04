@@ -13,7 +13,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-5 p-5 m-2 text-gray-500 ">
+    <div className="grid grid-cols-5 p-5   m-2 text-gray-500 ">
       <div className="flex flex-col p-2 gap-2">
         <svg
           width="137"
@@ -119,29 +119,4 @@ const Footer = () => {
 
 export default Footer;
 
-/*
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Specialities
-Neurology
-Cardiologist
-Dentist
-Urology
-Services
-Medical
-Operation
-Laboratory
-ICU
-Contact Us
- 3556 Beech Street, USA
-
- +1 315 369 5943
-
- doccure@example.com
-
-Newsletter
-Enter Email
-
-
-*/
