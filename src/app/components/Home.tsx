@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import SideMenu from "./SideMenu";
 
 const Home = () => {
   const [age, setAge] = React.useState("");
@@ -26,15 +27,16 @@ const Home = () => {
       className="w-full h-[400px] bg-cover bg-center bg-no-repeat relative flex flex-col justify-center "
       style={{ backgroundImage: "url('/banner.png')" }}
     >
-      <div className="text-center pt-3 ">
+    
+      <div className="text-center pt-5  ">
         <h1 className="text-3xl ">Search Doctor, Make an Appointment</h1>
         <p className=" text-sm text-slate-500">
           Discover the best doctors, clinic & hospital the city nearest to you.
         </p>
       </div>
       {/* search div */}
-      <div className="flex justify-center items-center  gap-5 my-16">
-        <Box sx={{ minWidth: 200 }}>
+      <div className="flex flex-col lg:flex-row justify-center items-center  gap-5 my-16">
+        <Box  sx={{ minWidth: 300 }}>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">
               Search Location
@@ -60,7 +62,7 @@ const Home = () => {
             </Select>
           </FormControl>
         </Box>
-        <Stack spacing={2} sx={{ width: 300}} className="">
+        <Stack spacing={2} sx={{ minWidth: 300 }} className="">
           <Autocomplete
             freeSolo
             id="free-solo-2-demo"
@@ -85,14 +87,16 @@ const Home = () => {
         <Button
           sx={{
             height: "55px",
-           
+            minWidth:"300px"
           }}
           variant="contained"
           className="bg-sky-500 text-white "
         >
           Search
         </Button>
+       
       </div>
+      
     </div>
   );
 };

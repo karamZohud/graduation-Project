@@ -13,7 +13,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-5 p-5   m-2 text-gray-500 ">
+    <div className="container mx-auto grid md:grid-cols-5 p-5 sm:grid-cols-2  m-2 text-gray-500 ">
       <div className="flex flex-col p-2 gap-2">
         <svg
           width="137"
@@ -98,7 +98,7 @@ const Footer = () => {
       <div className="">
         <div className="text-xl font-semibold">Newsletter</div>
         <div className=""></div>
-        <div className="flex gap-3">
+        <div className="flex sm:flex-col md:flex-row gap-3">
           <div className="flex justify-center items-center text-black bg-gray-300 p-2 rounded-full">
             <Facebook />
           </div>

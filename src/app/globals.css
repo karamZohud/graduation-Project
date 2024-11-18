@@ -2,3 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+.keen-slider__slide {
+  margin: 0; /* Ensure no margin between slides */
+  padding: 0; /* Ensure no padding between slides */
+}
+.clinic-features {
+  text-align: center;
+  padding: 20px;
+}
+
+.parent{
+  position: relative;
+}
+.parent:hover .child {
+  top: -35px;
+  right: -50px;
+}
+.keen-slider-wrapper {
+  position: relative;
+}
+
+.keen-slider-arrow-left,
+.keen-slider-arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  border: none;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.keen-slider-arrow-left {
+  left: 1px;
+}
+
+.keen-slider-arrow-right {
+  right: 1px;
+}

@@ -7,9 +7,9 @@ const cards = [1, 2, 3];
 
 const HomeCard = () => {
   return (
-    <div className="grid lg:grid-cols-3  md:grid-cols-2 ">
+    <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2">
       {cards.map((card, ind) => (
-        <Card imgno={ind + 1} />
+        <Card key={ind} imgno={ind + 1} />
       ))}
     </div>
   );

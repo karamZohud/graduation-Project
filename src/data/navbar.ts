@@ -62,25 +62,24 @@ export const list = [
     id: 3,
     name: "Specialties",
     url: "/",
-    subMenu: []
-  },{
+    subMenu: [],
+  },
+  {
     id: 4,
     name: "Doctors",
     url: "/",
-    subMenu: []
-  },{
+    subMenu: [],
+  },
+  {
     id: 5,
     name: "Blog",
     url: "/",
-    subMenu: []
-  },{
+    subMenu: [],
+  },
+  {
     id: 6,
     name: "Contact Us",
     url: "/",
-    subMenu: []
-  }
-
+    subMenu: [],
+  },
 ];
-
-
-

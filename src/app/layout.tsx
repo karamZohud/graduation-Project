@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -5,6 +6,8 @@ import Navbar from "./components/Navbar";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/Footer";
+import SideMenu from "./components/SideMenu";
+import { useState } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,11 +30,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body >
+      <body className="relative" >
       <ToastContainer theme='colored' position='top-center' />
-        <Navbar />
+        {/* <Navbar /> */}
+      
        <div className=" min-h-[500px] bg-gray-50">
        {children}
        </div>

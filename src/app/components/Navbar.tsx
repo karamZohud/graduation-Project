@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { list } from "@/data/navbar";
 import ColorModeSelect from "@/shared-theme/ColorModeSelect";
 
-const Navbar = () => {
+const Navbar = (props: any) => {
   const [anchorEl, setAnchorEl] = useState(
     Array.from({ length: list.length }, () => null)
   );
@@ -28,7 +28,8 @@ const Navbar = () => {
         key={item.id}
         className="cursor-pointer hover:text-sky-700  transition hover:shadow-2xl"
         color="inherit"
-        onClick={(e) => handleMenuOpen(e, _idx)}
+        onMouseEnter={(e) => handleMenuOpen(e, _idx)}
+        onMouseLeave={handleMenuClose} 
         aria-controls={`menu-${_idx}`}
         aria-haspopup="true"
       >
@@ -59,7 +60,7 @@ const Navbar = () => {
   });
 
   return (
-    <header className="bg-white">
+    <header  className="bg-white" >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
@@ -108,7 +109,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block"  >
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">{lists}</ul>
             </nav>
@@ -132,9 +133,14 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-
-            <div className="block md:hidden">
-              <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+            {/* hamburger icon */}
+            <div className="block lg:hidden">
+              <button
+                className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+           
+                onClick={()=>props.setClosedMenu(!props.closedMenu)}
+              >
+                
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="size-5"
