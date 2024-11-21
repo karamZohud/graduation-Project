@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Footer from "./components/Footer";
+import Footer from "./components/HomePage/Footer";
 import SideMenu from "./components/SideMenu";
 import { useState } from "react";
 

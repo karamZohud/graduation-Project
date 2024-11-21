@@ -67,7 +67,7 @@ export const list = [
   {
     id: 4,
     name: "Doctors",
-    url: "/",
+    url: "/doctors",
     subMenu: [],
   },
   {

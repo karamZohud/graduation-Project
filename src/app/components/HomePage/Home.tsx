@@ -12,8 +12,8 @@ import {
   TextField,
 } from "@mui/material";
 import Image from "next/image";
-import React from "react";
-import SideMenu from "./SideMenu";
+import React, { ChangeEvent, useState } from "react";
+import SideMenu from "../SideMenu";
 
 const Home = () => {
   const [age, setAge] = React.useState("");
@@ -21,13 +21,20 @@ const Home = () => {
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
+  const [filteredOptions, setFilteredOptions] = useState(top100Doctors);
 
+  const handleInputChange = (e:any) => {
+    const searchTerm = e.target.value;
+    const filtered = top100Doctors.filter((doctor) =>
+      `${doctor.title} - ${doctor.location}`.toLowerCase().includes(searchTerm)
+    );
+    setFilteredOptions(filtered);
+  };
   return (
     <div
       className="w-full h-[400px] bg-cover bg-center bg-no-repeat relative flex flex-col justify-center "
       style={{ backgroundImage: "url('/banner.png')" }}
     >
-    
       <div className="text-center pt-5  ">
         <h1 className="text-3xl ">Search Doctor, Make an Appointment</h1>
         <p className=" text-sm text-slate-500">
@@ -36,7 +43,7 @@ const Home = () => {
       </div>
       {/* search div */}
       <div className="flex flex-col lg:flex-row justify-center items-center  gap-5 my-16">
-        <Box  sx={{ minWidth: 300 }}>
+        <Box sx={{ minWidth: 300 }}>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">
               Search Location
@@ -67,13 +74,14 @@ const Home = () => {
             freeSolo
             id="free-solo-2-demo"
             disableClearable
-            options={top100Doctors.map(
+            options={filteredOptions.map(
               (option) => option.title + " - " + option.location
             )}
             renderInput={(params) => (
               <TextField
                 {...params}
                 label="Search Doctors, Clinic , etc"
+                onChange={(e)=>handleInputChange(e)}
                 slotProps={{
                   input: {
                     ...params.InputProps,
@@ -87,16 +95,14 @@ const Home = () => {
         <Button
           sx={{
             height: "55px",
-            minWidth:"300px"
+            minWidth: "300px",
           }}
           variant="contained"
           className="bg-sky-500 text-white "
         >
           Search
         </Button>
-       
       </div>
-      
     </div>
   );
 };

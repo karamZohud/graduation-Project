@@ -1,5 +1,5 @@
 "use client";
-import { Button, Menu, MenuItem } from "@mui/material";
+import { Button, Link, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { list } from "@/data/navbar";
@@ -24,7 +24,7 @@ const Navbar = (props: any) => {
 
   const lists = list.map((item, _idx) => {
     return (
-      <li
+      <Link underline="none" href={item.url}
         key={item.id}
         className="cursor-pointer hover:text-sky-700  transition hover:shadow-2xl"
         color="inherit"
@@ -55,7 +55,7 @@ const Navbar = (props: any) => {
             })}
           </Menu>
         )}
-      </li>
+      </Link>
     );
   });
 
